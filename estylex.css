@@ -7,15 +7,12 @@
     text-align: center;
     -ms-text-size-adjust: auto;
 }
-
-#Result{
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 500;
-    margin-right: 500;
-    text-align: left;
+#ingrediente2{
+width: 400px;
 }
+#ingrediente1{
+    width: 400px;
+    }
 a{
     text-decoration: none;
 }
@@ -64,11 +61,16 @@ button:hover{
     button{
         width: 10% !important;
     }
-
+    #ingrediente2{
+        width: 50px;
+        }
+        #ingrediente1{
+            width: 50px;
+            }
 }
 @media only screen and (max-width: 1980px){
     button{
-        width: 25% !important;
+        width: 10% !important;
     }
     #Messagebox{
 
@@ -76,22 +78,35 @@ button:hover{
     }
 
 }
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 800px){
     button{
         width: 25% !important;
     }
     *{
         font-size: 24px !important;
     }
-    
+}
+@media only screen and (max-height: 1000px){
+    button{
+        width: 25% !important;
+    }
+    *{
+        font-size: 24px !important;
+    }
 }
 @media only screen and (max-width: 773px){
     button{
-        width: 50% !important;
+        width: 25% !important;
     }
     *{
         font-size: 15px !important;
     }
+    #ingrediente2{
+        width: 300px;
+        }
+        #ingrediente1{
+            width: 300px;
+            }
 }
 
 @media only screen and (max-width: 450px){
@@ -104,14 +119,22 @@ button:hover{
     *{
         font-size: 10px !important;
     }
+    #ingrediente2{
+        width: 200px;
+        }
+        #ingrediente1{
+            width: 200px;
+            }
 }
-@media only screen and (max-width: 351px){
-    *{
-        font-size: 8px !important;
-    }
-}
+
 @media only screen and (max-width: 273px){
     *{
         font-size: 5px !important;
     }
+    #ingrediente2{
+        width: 100px;
+        }
+        #ingrediente1{
+            width: 100px;
+            }
 }

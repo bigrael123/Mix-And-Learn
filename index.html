@@ -51,7 +51,7 @@
                    <option value="23">Vanish</option> 
                     <option value="24">Vinagre</option> 
                     </select>
-                    <h1>+</h1>
+                    <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</h1>
                     <label  for="ingrediente2">Ingrediente 2:</label> 
                     <select name="ingredientes2" id="ingrediente2" disabled> 
                      <option value="vazio2">                </option> 
@@ -83,6 +83,9 @@
                 option = document.createElement("option")
                 option.text = "Vinagre"
                 select.add(option)
+                option2 = document.createElement("option")
+                option2.text = "Limão"
+                select.add(option2)
             }
         }
         function removeOptions(selectElement) {
@@ -100,6 +103,12 @@
                 if(selectedtext2 == "Vinagre" && selectedtext == "Bicarbonato de Sódio" ){  
                     document.getElementById("ResultTitle").innerHTML = "BICARBONATO DE SÓDIO + VINAGRE:"
                     document.getElementById("Result").innerHTML = "Reação: A combinação de bicarbonato de sódio e vinagre resulta em uma efervescência devido à liberação de dióxido de carbono. <br><br>Usos Comuns:<br><br>· Desobstrução de canos.<br>· Limpeza de superfícies.<br><br> Perigos: Esta mistura não apresenta perigos significativos quando usada para fins de limpeza.<br><br>Recomendações:<br><br>· Use em áreas bem ventiladas.<br>· Evite aplicar em superfícies sensíveis, como mármore ou granito, pois o vinagre pode causar corrosão. "
+
+
+                }
+                if(selectedtext2 == "Limão" && selectedtext == "Bicarbonato de Sódio" ){  
+                    document.getElementById("ResultTitle").innerHTML = "BICARBONATO DE SÓDIO + LIMÃO:"
+                    document.getElementById("Result").innerHTML = "Reação: Quando o bicarbonato de sódio e o limão entram em contato, ocorre uma reação efervescente devido à liberação de dióxido de carbono. <br><br>Usos Comuns:<br><br>· Desobstrução de canos.<br>· Limpeza de superfícies.<br><br> Perigos: Esta mistura não apresenta perigos significativos quando usada para fins de limpeza.<br><br>Recomendações:<br><br>· Use em áreas bem ventiladas.<br>· Evite aplicar em superfícies sensíveis, como mármore ou granito, pois o vinagre pode causar corrosão. "
 
 
                 }
