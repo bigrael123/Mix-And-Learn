@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgba(245, 118, 0, 0.932);
+    font-size: 30px;
+    text-align: center;
+    -ms-text-size-adjust: auto;
+}
+
+#Result{
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 500;
+    margin-right: 500;
+    text-align: left;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: aqua;
+    background-repeat: no-repeat;
+    background-position: center center fixed;
+    padding: 0;
+    margin: 0;
+}
+.container .name h1{
+    font-size: 60px;
+}
+
+
+
+
+
+
+
+button{
+    /* background-color: black; */
+    background: linear-gradient(to right, blue 50%, black 50%);
+    background-size: 200% 100%;
+    height:50px;
+    width:200px;
+    background-position: right bottom;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    transition: all 300ms ease-out;
+    margin-left: -8px;
+    margin-bottom: 20px;
+}
+button:hover{
+    background-position: left bottom;
+    color: orangered;
+}
+
+
+
+
+@media only screen and (max-width: 300px){
+    button{
+        width: 10% !important;
+    }
+
+}
+@media only screen and (max-width: 1980px){
+    button{
+        width: 25% !important;
+    }
+    #Messagebox{
+
+        width: 75% !important;
+    }
+
+}
+@media only screen and (max-width: 1000px){
+    button{
+        width: 25% !important;
+    }
+    *{
+        font-size: 24px !important;
+    }
+    
+}
+@media only screen and (max-width: 773px){
+    button{
+        width: 50% !important;
+    }
+    *{
+        font-size: 15px !important;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    button{
+        width: 25% !important;
+    }
+    #logo{
+        width: 50%;
+    }
+    *{
+        font-size: 10px !important;
+    }
+}
+@media only screen and (max-width: 351px){
+    *{
+        font-size: 8px !important;
+    }
+}
+@media only screen and (max-width: 273px){
+    *{
+        font-size: 5px !important;
+    }
+}

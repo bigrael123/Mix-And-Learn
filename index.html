@@ -1,0 +1,159 @@
+<html lang="pt-be">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça Israel Beteguella e seu portifólio" />
+    <link rel="stylesheet" href="estylex.css">
+    <meta name="keywords" content="chemistry, schoolproject, araras, desenvolvedor">
+     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+     <script src="Main.js"></script>
+    <title>Mix and Learn</title>
+</head>
+<body>
+    
+    <main>
+            <section class="container">
+                <div class="name">
+                    <img id="logo" src="./logopng.png" width="400" height="auto" alt="Logo MixAndLearn">
+                    <h1>Misture Ingredientes e Veja o Que Acontece.</h1>
+                </div>
+                
+                <div id="form">
+                    <p>Selecione Os Ingredientes</p>
+                    
+                </div>
+                <label for="ingrediente1">Ingrediente 1:</label> 
+                    <select name="ingredientes1" id="ingrediente1" onchange="Activateselect2();"> 
+                    <option value="0"></option> 
+                    <option value="1">Ácido Muriático</option> 
+                    <option value="2">Água Oxigenada</option> 
+                   <option value="3">Água Sanitária</option> 
+                    <option value="4">Álcool</option> 
+                    <option value="5">Álcool em Gel</option> 
+                    <option value="6">Alvejante (Cloro)</option> 
+                    <option value="7">Amônia</option> 
+                   <option value="8">Bicarbonato de Sódio</option> 
+                    <option value="9">Cloro em GeL</option> 
+                    <option value="10">Desentupidores de Pia</option> 
+                    <option value="11">Desinfetante (Base de Amônia)</option> 
+                    <option value="12">Detergente</option> 
+                   <option value="13">Limão</option> 
+                    <option value="14">Limpa Alumínio</option> 
+                    <option value="15">Limpa Forno</option> 
+                    <option value="16">Limpa Vidros</option> 
+                    <option value="17">Lisoform</option> 
+                   <option value="18">Lustra Móveis</option> 
+                    <option value="19">Multiuso</option> 
+                    <option value="20">Pasta de Dente</option> 
+                    <option value="21">Querosene</option> 
+                    <option value="22">Sabão em Pó</option> 
+                   <option value="23">Vanish</option> 
+                    <option value="24">Vinagre</option> 
+                    </select>
+                    <h1>+</h1>
+                    <label  for="ingrediente2">Ingrediente 2:</label> 
+                    <select name="ingredientes2" id="ingrediente2" disabled> 
+                     <option value="vazio2">                </option> 
+                    <option value="Alcool2">Álcool</option> 
+                    <option value="Amonia2">Amônia</option> 
+                   <option value="Desinfetante2">Desinfetante</option> 
+                    </select>
+            </section>
+            <button onclick="Misturar()" id = "submit" type = 'button'>Misturar!</button >
+            <div class="Result">
+                <H1 id="ResultTitle"></H1>
+                <p  id ="Result"></p>   
+            </div>
+    </main>
+    <script>
+        function Activateselect2(){
+            elt = document.getElementById("ingrediente1")
+            selectedtext = elt.options[elt.selectedIndex].text
+            console.log(selectedtext)
+            removeOptions(document.getElementById("ingrediente2"));
+            if(selectedtext == ""){
+                document.getElementById("ingrediente2").setAttribute("disabled","")
+            }
+
+            if(selectedtext == "Bicarbonato de Sódio"){
+                
+               document.getElementById("ingrediente2").removeAttribute("disabled")
+               select =  document.getElementById("ingrediente2")
+                option = document.createElement("option")
+                option.text = "Vinagre"
+                select.add(option)
+            }
+        }
+        function removeOptions(selectElement) {
+            var i, L = selectElement.options.length - 1;
+            for(i = L; i >= 0; i--) {
+                selectElement.remove(i);
+   }
+}
+        function Misturar(){
+           
+                elt =document.getElementById("ingrediente1")
+                selectedtext = elt.options[elt.selectedIndex].text
+                ig2 =document.getElementById("ingrediente2")
+                selectedtext2 = ig2.options[ig2.selectedIndex].text
+                if(selectedtext2 == "Vinagre" && selectedtext == "Bicarbonato de Sódio" ){  
+                    document.getElementById("ResultTitle").innerHTML = "BICARBONATO DE SÓDIO + VINAGRE:"
+                    document.getElementById("Result").innerHTML = "Reação: A combinação de bicarbonato de sódio e vinagre resulta em uma efervescência devido à liberação de dióxido de carbono. <br><br>Usos Comuns:<br><br>· Desobstrução de canos.<br>· Limpeza de superfícies.<br><br> Perigos: Esta mistura não apresenta perigos significativos quando usada para fins de limpeza.<br><br>Recomendações:<br><br>· Use em áreas bem ventiladas.<br>· Evite aplicar em superfícies sensíveis, como mármore ou granito, pois o vinagre pode causar corrosão. "
+
+
+                }
+        }
+        function displayAbout(){
+            var arrow = document.getElementById('animation')
+            arrow.classList.toggle('rotate')
+            var about = document.getElementById('about')
+            about.classList.toggle('active')
+        }
+        function changeMessageStyle(){
+            var thetext = document.getElementById('Messagebox')
+            thetext.style.textAlign = "start"
+            thetext.placeholder = ""
+        }
+        function backMessage(){
+            var thetext = document.getElementById('Messagebox')
+            if(thetext.value === ""){
+                thetext.style.textAlign = "center"
+                thetext.placeholder = "Escreva sua Mensagem"
+            }
+        }
+           function startTopic(){
+               var thetext = document.getElementById('tp')
+               thetext.style.textAlign = "start"
+               thetext.placeholder = "";
+           }
+           function backTopico(){
+                var thetext = document.getElementById('tp')
+                if(thetext.value === ""){
+                  thetext.style.textAlign = "center"
+                  thetext.placeholder = "Topico"
+            }
+            else{
+                
+            }
+        }   
+        function updatetext(){
+             var therealtext = document.getElementById('realmessage')
+             var thetext = document.getElementById('Messagebox')
+             therealtext.value = thetext.value;
+        }
+        function startEmail(){
+               var thetext = document.getElementById('enviar')
+               thetext.style.textAlign = "start"
+               thetext.placeholder = "";
+           }
+         function backEmail(){
+             var thetext = document.getElementById('enviar')
+             if(thetext.value === ""){
+              thetext.style.textAlign = "center"
+                thetext.placeholder = "Seu Email"
+             }
+        }   
+    </script>
+</body>
+</html>
