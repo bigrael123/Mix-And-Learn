@@ -27,7 +27,10 @@ body{
     font-size: 60px;
 }
 
-
+#Result{
+        margin-bottom: 20px;
+        text-align: left;
+}
 
 
 
@@ -70,7 +73,8 @@ button:hover{
 }
 @media only screen and (max-width: 1980px){
     button{
-        width: 10% !important;
+        width: 15% !important;
+        height: 5% !important;
     }
     #Messagebox{
 
@@ -81,6 +85,7 @@ button:hover{
 @media only screen and (max-width: 800px){
     button{
         width: 25% !important;
+        height: 5% !important;
     }
     *{
         font-size: 24px !important;
@@ -88,7 +93,8 @@ button:hover{
 }
 @media only screen and (max-height: 1000px){
     button{
-        width: 25% !important;
+        width: 15% !important;
+        height: 7% !important;
     }
     *{
         font-size: 24px !important;
@@ -96,7 +102,8 @@ button:hover{
 }
 @media only screen and (max-width: 773px){
     button{
-        width: 25% !important;
+        width: 15% !important;
+        height: 7% !important;
     }
     *{
         font-size: 15px !important;
@@ -111,7 +118,8 @@ button:hover{
 
 @media only screen and (max-width: 450px){
     button{
-        width: 25% !important;
+        width: 15% !important;
+        height: 7% !important;
     }
     #logo{
         width: 50%;

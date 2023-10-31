@@ -79,6 +79,9 @@
                 
                document.getElementById("ingrediente2").removeAttribute("disabled")
                select =  document.getElementById("ingrediente2")
+               option0 = document.createElement("option")
+                option0.text = " "
+                select.add(option0)
                 option = document.createElement("option")
                 option.text = "Vinagre"
                 select.add(option)
@@ -86,7 +89,102 @@
                 option2.text = "Limão"
                 select.add(option2)
             }
-        }
+            if(selectedtext == "Limão"){
+                
+                document.getElementById("ingrediente2").removeAttribute("disabled")
+                select =  document.getElementById("ingrediente2")
+                option0 = document.createElement("option")
+                 option0.text = " "
+                 select.add(option0)
+                 option = document.createElement("option")
+                 option.text = "Bicarbonato de Sódio"
+                 select.add(option)
+             }
+            if(selectedtext == "Vinagre"){
+            
+                
+                document.getElementById("ingrediente2").removeAttribute("disabled")
+                select =  document.getElementById("ingrediente2")
+                option0 = document.createElement("option")
+                 option0.text = " "
+                 select.add(option0)
+                 option = document.createElement("option")
+                 option.text = "Bicarbonato de Sódio"
+                 select.add(option)
+             }
+             if(selectedtext == "Limpa Forno"){
+                
+                document.getElementById("ingrediente2").removeAttribute("disabled")
+                select =  document.getElementById("ingrediente2")
+                option0 = document.createElement("option")
+                 option0.text = " "
+                 select.add(option0)
+                 option = document.createElement("option")
+                 option.text = "Detergente"
+                 select.add(option)
+                 option2 = document.createElement("option")
+                 option2.text = "Multiuso"
+                 select.add(option2)
+             }
+             if(selectedtext == "Detergente"){
+                
+                document.getElementById("ingrediente2").removeAttribute("disabled")
+                select =  document.getElementById("ingrediente2")
+                option0 = document.createElement("option")
+                 option0.text = " "
+                 select.add(option0)
+                 option = document.createElement("option")
+                 option.text = "Limpa Forno"
+                 select.add(option)
+             }
+             if(selectedtext == "Multiuso"){
+                
+                document.getElementById("ingrediente2").removeAttribute("disabled")
+                select =  document.getElementById("ingrediente2")
+                option0 = document.createElement("option")
+                 option0.text = " "
+                 select.add(option0)
+                 option = document.createElement("option")
+                 option.text = "Limpa Forno"
+                 select.add(option)
+             }
+             if(selectedtext == "Lustra Móveis"){
+                
+                document.getElementById("ingrediente2").removeAttribute("disabled")
+                select =  document.getElementById("ingrediente2")
+                option0 = document.createElement("option")
+                 option0.text = " "
+                 select.add(option0)
+                 option = document.createElement("option")
+                 option.text = "Água Sanitária"
+                 select.add(option)
+             }
+             if(selectedtext == "Água Sanitária"){
+                
+                document.getElementById("ingrediente2").removeAttribute("disabled")
+                select =  document.getElementById("ingrediente2")
+                option0 = document.createElement("option")
+                 option0.text = " "
+                 select.add(option0)
+                 option = document.createElement("option")
+                 option.text = "Lustra Móveis"
+                 select.add(option)
+                 option2 = document.createElement("option")
+                 option2.text = "Lisoform"
+                 select.add(option2)
+             }
+             if(selectedtext == "Lisoform"){
+                
+                document.getElementById("ingrediente2").removeAttribute("disabled")
+                select =  document.getElementById("ingrediente2")
+                option0 = document.createElement("option")
+                 option0.text = " "
+                 select.add(option0)
+                 option = document.createElement("option")
+                 option.text = "Água Sanitária"
+                 select.add(option)
+             }
+            }
         function removeOptions(selectElement) {
             var i, L = selectElement.options.length - 1;
             for(i = L; i >= 0; i--) {
@@ -99,69 +197,41 @@
                 selectedtext = elt.options[elt.selectedIndex].text
                 ig2 =document.getElementById("ingrediente2")
                 selectedtext2 = ig2.options[ig2.selectedIndex].text
-                if(selectedtext2 == "Vinagre" && selectedtext == "Bicarbonato de Sódio" ){  
+                if((selectedtext2 == "Vinagre" && selectedtext == "Bicarbonato de Sódio" )|| (selectedtext2 == "Bicarbonato de Sódio" && selectedtext == "Vinagre" )){  
                     document.getElementById("ResultTitle").innerHTML = "BICARBONATO DE SÓDIO + VINAGRE:"
                     document.getElementById("Result").innerHTML = "Reação: A combinação de bicarbonato de sódio e vinagre resulta em uma efervescência devido à liberação de dióxido de carbono. <br><br>Usos Comuns:<br><br>· Desobstrução de canos.<br>· Limpeza de superfícies.<br><br> Perigos: Esta mistura não apresenta perigos significativos quando usada para fins de limpeza.<br><br>Recomendações:<br><br>· Use em áreas bem ventiladas.<br>· Evite aplicar em superfícies sensíveis, como mármore ou granito, pois o vinagre pode causar corrosão. "
 
 
                 }
-                if(selectedtext2 == "Limão" && selectedtext == "Bicarbonato de Sódio" ){  
+                if((selectedtext2 == "Limão" && selectedtext == "Bicarbonato de Sódio") || (selectedtext2 == "Bicarbonato de Sódio" && selectedtext == "Limão") ){  
                     document.getElementById("ResultTitle").innerHTML = "BICARBONATO DE SÓDIO + LIMÃO:"
-                    document.getElementById("Result").innerHTML = "Reação: Quando o bicarbonato de sódio e o limão entram em contato, ocorre uma reação efervescente devido à liberação de dióxido de carbono. <br><br>Usos Comuns:<br><br>· Desobstrução de canos.<br>· Limpeza de superfícies.<br><br> Perigos: Esta mistura não apresenta perigos significativos quando usada para fins de limpeza.<br><br>Recomendações:<br><br>· Use em áreas bem ventiladas.<br>· Evite aplicar em superfícies sensíveis, como mármore ou granito, pois o vinagre pode causar corrosão. "
+                    document.getElementById("Result").innerHTML = "Reação: Quando o bicarbonato de sódio e o limão entram em contato, ocorre uma reação efervescente devido à liberação de dióxido de carbono. <br><br>Usos Comuns:<br><br>· Limpeza de superfícies de cozinha.<br>· Desodorização de ambientes.<br>· Remoção de manchas leves.<br><br> Perigos: Não há perigos significativos associados a esta mistura quando utilizada para fins de limpeza.<br><br>Recomendações:<br><br>· Use a mistura em áreas bem ventiladas.<br>· Evite aplicar em superfícies sensíveis, como mármore ou granito, pois o limão pode causar corrosão. "
+
+
+                }
+                if((selectedtext2 == "Detergente" && selectedtext == "Limpa Forno") || (selectedtext2 == "Limpa Forno" && selectedtext == "Detergente") ){  
+                    document.getElementById("ResultTitle").innerHTML = "LIMPA FORNO + DETERGENTE:"
+                    document.getElementById("Result").innerHTML = "Reação: A combinação de limpa forno e detergente não é recomendada, pois não resulta em uma reação química significativa. <br><br>Usos Comuns:<br><br>· Não é comum utilizar esses produtos em conjunto, pois cada um possui finalidades específicas.<br><br> Perigos: Embora a mistura não gere produtos químicos perigosos, ela pode ser ineficaz para as tarefas de limpeza desejadas.<br><br>Recomendações:<br><br>· Use a mistura em áreas bem ventiladas.<br>· Em vez de misturá-los, utilize cada produto separadamente, seguindo as instruções de uso do fabricante. "
+                }
+                if((selectedtext2 == "Multiuso" && selectedtext == "Limpa Forno") || (selectedtext2 == "Limpa Forno" && selectedtext == "Multiuso") ){  
+                    document.getElementById("ResultTitle").innerHTML = "LIMPA FORNO + MULTIUSO:"
+                    document.getElementById("Result").innerHTML = "Reação:A combinação de Limpa Forno e Multiuso não é recomendada, pois pode resultar em uma mistura de produtos químicos variados, o que pode ser perigoso. <br><br>Usos Comuns:<br><br>· Não é aconselhável fazer essa mistura devido ao risco associado.<br><br> Perigos: A reação entre esses produtos pode levar à liberação de vapores desconhecidos e potencialmente perigosos, o que pode resultar em irritação nas vias respiratórias, olhos e pele.<br><br>Recomendações:<br><br>· Evite combinar Limpa Forno com Multiuso.<br>· Mantenha os produtos em locais separados e use conforme as instruções no rótulo. "
+
+
+                }
+                if((selectedtext2 == "Água Sanitária" && selectedtext == "Lustra Móveis") || (selectedtext2 == "Lustra Móveis" && selectedtext == "Água Sanitária") ){  
+                    document.getElementById("ResultTitle").innerHTML = "LUSTRA MÓVEIS + ÁGUA SANITÁRIA:"
+                    document.getElementById("Result").innerHTML = "Reação: A combinação de lustra móveis e água sanitária pode resultar em uma mistura instável e potencialmente perigosa. <br><br>Usos Comuns:<br><br>· Não é recomendado combinar esses produtos devido aos riscos envolvidos.<br><br> Perigos: A reação entre lustra móveis e água sanitária pode produzir produtos químicos não identificados, os quais podem ser tóxicos ou corrosivos. Os vapores resultantes podem causar irritação nas vias respiratórias, olhos e pele.<br><br>Recomendações:<br><br>· Evite a combinação de lustra móveis com água sanitária.<br>· Mantenha os produtos em locais separados. "
+
+
+                }
+                if((selectedtext2 == "Água Sanitária" && selectedtext == "Lisoform") || (selectedtext2 == "Lisoform" && selectedtext == "Água Sanitária") ){  
+                    document.getElementById("ResultTitle").innerHTML = "LISOFORM + ÁGUA SANITÁRIA:"
+                    document.getElementById("Result").innerHTML = "Reação: A combinação de Lisoform e Água Sanitária pode resultar na formação de cloramina, um gás tóxico e irritante. <br><br>Usos Comuns:<br><br>· Não é recomendado combinar esses produtos devido aos riscos envolvidos.<br><br> Perigos: A mistura pode liberar vapores irritantes como a cloramina que causa irritação nas vias respiratórias, olhos e pele. A exposição prolongada ou em grandes quantidades pode levar a complicações respiratórias que vão desde irritações até queimaduras no seu sistema respiratório e intoxicações graves.<br><br>Recomendações:<br><br>· Evite a combinação de Lisoform com Água Sanitária<br>· Mantenha os dois produtos armazenados separadamente e em locais bem ventilados. "
 
 
                 }
         }
-        function displayAbout(){
-            var arrow = document.getElementById('animation')
-            arrow.classList.toggle('rotate')
-            var about = document.getElementById('about')
-            about.classList.toggle('active')
-        }
-        function changeMessageStyle(){
-            var thetext = document.getElementById('Messagebox')
-            thetext.style.textAlign = "start"
-            thetext.placeholder = ""
-        }
-        function backMessage(){
-            var thetext = document.getElementById('Messagebox')
-            if(thetext.value === ""){
-                thetext.style.textAlign = "center"
-                thetext.placeholder = "Escreva sua Mensagem"
-            }
-        }
-           function startTopic(){
-               var thetext = document.getElementById('tp')
-               thetext.style.textAlign = "start"
-               thetext.placeholder = "";
-           }
-           function backTopico(){
-                var thetext = document.getElementById('tp')
-                if(thetext.value === ""){
-                  thetext.style.textAlign = "center"
-                  thetext.placeholder = "Topico"
-            }
-            else{
-                
-            }
-        }   
-        function updatetext(){
-             var therealtext = document.getElementById('realmessage')
-             var thetext = document.getElementById('Messagebox')
-             therealtext.value = thetext.value;
-        }
-        function startEmail(){
-               var thetext = document.getElementById('enviar')
-               thetext.style.textAlign = "start"
-               thetext.placeholder = "";
-           }
-         function backEmail(){
-             var thetext = document.getElementById('enviar')
-             if(thetext.value === ""){
-              thetext.style.textAlign = "center"
-                thetext.placeholder = "Seu Email"
-             }
-        }   
     </script>
 </body>
 </html>
