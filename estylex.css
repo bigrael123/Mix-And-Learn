@@ -80,7 +80,7 @@ button:hover{
 @media only screen and (max-width: 1980px){
     button{
         width: 15% !important;
-        height: 1% !important;
+        height: 5% !important;
     }
     #Messagebox{
 
@@ -91,7 +91,6 @@ button:hover{
 @media only screen and (max-width: 800px){
     button{
         width: 25% !important;
-        height: 5% !important;
     }
     *{
         font-size: 24px !important;
