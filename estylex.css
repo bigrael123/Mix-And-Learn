@@ -77,7 +77,20 @@ button:hover{
             width: 50px;
             }
 }
+
+
 @media only screen and (max-width: 1980px){
+    button{
+        width: 15% !important;
+        height: 2% !important;
+    }
+    #Messagebox{
+
+        width: 75% !important;
+    }
+
+}
+@media only screen and (max-width: 1080px){
     button{
         width: 15% !important;
         height: 5% !important;
@@ -97,10 +110,31 @@ button:hover{
         font-size: 24px !important;
     }
 }
+@media only screen and (max-height: 2400px){
+    #SLP{
+        padding: 40;
+    }
+    button{
+        width: 15% !important;
+        height: 2% !important;
+    }
+    *{
+        font-size: 24px !important;
+    }
+}
+@media only screen and (max-height: 1085px){
+    button{
+        width: 15% !important;
+        height: 5% !important;
+    }
+    *{
+        font-size: 24px !important;
+    }
+}
 @media only screen and (max-height: 1000px){
     button{
         width: 15% !important;
-        height: 7% !important;
+        height: 5% !important;
     }
     *{
         font-size: 24px !important;
@@ -109,7 +143,7 @@ button:hover{
 @media only screen and (max-width: 773px){
     button{
         width: 15% !important;
-        height: 7% !important;
+        height: 2% !important;
     }
     *{
         font-size: 15px !important;
@@ -125,7 +159,7 @@ button:hover{
 @media only screen and (max-width: 450px){
     button{
         width: 15% !important;
-        height: 7% !important;
+        height: 2% !important;
     }
     #logo{
         width: 50%;
@@ -144,6 +178,10 @@ button:hover{
 @media only screen and (max-width: 273px){
     *{
         font-size: 5px !important;
+    }
+    button{
+        width: 15% !important;
+        height: 1% !important;
     }
     #ingrediente2{
         width: 100px;
