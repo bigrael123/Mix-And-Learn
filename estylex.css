@@ -112,7 +112,6 @@ button:hover{
 }
 @media only screen and (max-height: 2400px){
     #SLP{
-        padding: 40;
     }
     button{
         width: 15% !important;
