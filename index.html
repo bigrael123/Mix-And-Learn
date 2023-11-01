@@ -88,7 +88,35 @@
                 option2 = document.createElement("option")
                 option2.text = "Limão"
                 select.add(option2)
+                option3 = document.createElement("option")
+                option3.text = "Pasta de Dente"
+                select.add(option3)
+                option4 = document.createElement("option")
+                option4.text = "Cloro em GeL"
+                select.add(option4)
             }
+            if(selectedtext == "Pasta de Dente"){
+                
+                document.getElementById("ingrediente2").removeAttribute("disabled")
+                select =  document.getElementById("ingrediente2")
+                option0 = document.createElement("option")
+                 option0.text = " "
+                 select.add(option0)
+                 option = document.createElement("option")
+                 option.text = "Bicarbonato de Sódio"
+                 select.add(option)
+             }
+             if(selectedtext == "Cloro em GeL"){
+                
+                document.getElementById("ingrediente2").removeAttribute("disabled")
+                select =  document.getElementById("ingrediente2")
+                option0 = document.createElement("option")
+                 option0.text = " "
+                 select.add(option0)
+                 option = document.createElement("option")
+                 option.text = "Bicarbonato de Sódio"
+                 select.add(option)
+             }
             if(selectedtext == "Limão"){
                 
                 document.getElementById("ingrediente2").removeAttribute("disabled")
@@ -111,7 +139,22 @@
                  option = document.createElement("option")
                  option.text = "Bicarbonato de Sódio"
                  select.add(option)
+                 option2 = document.createElement("option")
+                 option2.text = "Água Oxigenada"
+                 select.add(option2)
              }
+             if(selectedtext == "Água Oxigenada"){
+            
+                
+            document.getElementById("ingrediente2").removeAttribute("disabled")
+            select =  document.getElementById("ingrediente2")
+            option0 = document.createElement("option")
+             option0.text = " "
+             select.add(option0)
+             option = document.createElement("option")
+             option.text = "Vinagre"
+             select.add(option)
+         }
              if(selectedtext == "Limpa Forno"){
                 
                 document.getElementById("ingrediente2").removeAttribute("disabled")
@@ -172,6 +215,63 @@
                  option2 = document.createElement("option")
                  option2.text = "Lisoform"
                  select.add(option2)
+                 option3 = document.createElement("option")
+                 option3.text = "Amônia"
+                 select.add(option3) 
+                 option4 = document.createElement("option")
+                 option4.text = "Ácido Muriático"
+                 select.add(option4)
+             }
+             if(selectedtext == "Ácido Muriático"){
+                
+                document.getElementById("ingrediente2").removeAttribute("disabled")
+                select =  document.getElementById("ingrediente2")
+                option0 = document.createElement("option")
+                 option0.text = " "
+                 select.add(option0)
+                 option = document.createElement("option")
+                 option.text = "Água Sanitária"
+                 select.add(option)
+             }
+             if(selectedtext == "Amônia"){
+                
+                document.getElementById("ingrediente2").removeAttribute("disabled")
+                select =  document.getElementById("ingrediente2")
+                option0 = document.createElement("option")
+                 option0.text = " "
+                 select.add(option0)
+                 option = document.createElement("option")
+                 option.text = "Água Sanitária"
+                 select.add(option)
+                 option2 = document.createElement("option")
+                 option2.text = "Alvejante (Cloro)"
+                 select.add(option2)
+             }
+             
+             if(selectedtext == "Alvejante (Cloro)"){
+                
+                document.getElementById("ingrediente2").removeAttribute("disabled")
+                select =  document.getElementById("ingrediente2")
+                option0 = document.createElement("option")
+                 option0.text = " "
+                 select.add(option0)
+                 option = document.createElement("option")
+                 option.text = "Amônia"
+                 select.add(option)  
+                 option2 = document.createElement("option")
+                 option2.text = "Desinfetante (Base de Amônia)"
+                 select.add(option2)
+             }
+             if(selectedtext == "Desinfetante (Base de Amônia)"){
+                
+                document.getElementById("ingrediente2").removeAttribute("disabled")
+                select =  document.getElementById("ingrediente2")
+                option0 = document.createElement("option")
+                 option0.text = " "
+                 select.add(option0)
+                 option = document.createElement("option")
+                 option.text = "Alvejante (Cloro)"
+                 select.add(option)
              }
              if(selectedtext == "Lisoform"){
                 
@@ -209,13 +309,25 @@
 
 
                 }
+                if((selectedtext2 == "Pasta de Dente" && selectedtext == "Bicarbonato de Sódio") || (selectedtext2 == "Bicarbonato de Sódio" && selectedtext == "Pasta de Dente") ){  
+                    document.getElementById("ResultTitle").innerHTML = "BICARBONATO DE SODIO + PASTA DE DENTE:"
+                    document.getElementById("Result").innerHTML = "Reação: A mistura de bicarbonato de sódio e pasta de dente resulta em uma combinação abrasiva que pode ser eficaz na remoção de manchas e na limpeza de superfícies. <br><br>Usos Comuns:<br><br>· Remoção de manchas em superfícies não sensíveis.<br>· Limpeza de azulejos e rejunte.<br><br> Perigos: Não há perigos significativos associados a esta mistura quando utilizada para fins de limpeza.<br><br>Recomendações:<br><br>· Use a mistura com moderação.<br> · Não aplique em superfícies sensíveis, pois pode ser abrasiva. "
+
+
+                }
+                if((selectedtext2 == "Cloro em GeL" && selectedtext == "Bicarbonato de Sódio") || (selectedtext2 == "Bicarbonato de Sódio" && selectedtext == "Cloro em GeL") ){  
+                    document.getElementById("ResultTitle").innerHTML = "CLORO EM GEL + BICARBONATO DE SODIO:"
+                    document.getElementById("Result").innerHTML = "Reação:A combinação de cloro em gel e bicarbonato de sódio pode resultar em uma reação efervescente, liberando dióxido de carbono. <br><br>Usos Comuns:<br><br>· Não é recomendado misturar cloro em gel com bicarbonato de sódio devido aos riscos associados.<br><br> Perigos:A reação pode gerar vapores irritantes e, em casos mais extremos, pode causar irritação nas vias respiratórias, olhos e pele.<br><br>Recomendações:<br><br>· Evite combinar cloro em gel com bicarbonato de sódio.<br>· Mantenha os dois produtos em locais separados."
+
+
+                }
                 if((selectedtext2 == "Detergente" && selectedtext == "Limpa Forno") || (selectedtext2 == "Limpa Forno" && selectedtext == "Detergente") ){  
                     document.getElementById("ResultTitle").innerHTML = "LIMPA FORNO + DETERGENTE:"
                     document.getElementById("Result").innerHTML = "Reação: A combinação de limpa forno e detergente não é recomendada, pois não resulta em uma reação química significativa. <br><br>Usos Comuns:<br><br>· Não é comum utilizar esses produtos em conjunto, pois cada um possui finalidades específicas.<br><br> Perigos: Embora a mistura não gere produtos químicos perigosos, ela pode ser ineficaz para as tarefas de limpeza desejadas.<br><br>Recomendações:<br><br>· Use a mistura em áreas bem ventiladas.<br>· Em vez de misturá-los, utilize cada produto separadamente, seguindo as instruções de uso do fabricante. "
                 }
                 if((selectedtext2 == "Multiuso" && selectedtext == "Limpa Forno") || (selectedtext2 == "Limpa Forno" && selectedtext == "Multiuso") ){  
                     document.getElementById("ResultTitle").innerHTML = "LIMPA FORNO + MULTIUSO:"
-                    document.getElementById("Result").innerHTML = "Reação:A combinação de Limpa Forno e Multiuso não é recomendada, pois pode resultar em uma mistura de produtos químicos variados, o que pode ser perigoso. <br><br>Usos Comuns:<br><br>· Não é aconselhável fazer essa mistura devido ao risco associado.<br><br> Perigos: A reação entre esses produtos pode levar à liberação de vapores desconhecidos e potencialmente perigosos, o que pode resultar em irritação nas vias respiratórias, olhos e pele.<br><br>Recomendações:<br><br>· Evite combinar Limpa Forno com Multiuso.<br>· Mantenha os produtos em locais separados e use conforme as instruções no rótulo. "
+                    document.getElementById("Result").innerHTML = "Reação: A combinação de Limpa Forno e Multiuso não é recomendada, pois pode resultar em uma mistura de produtos químicos variados, o que pode ser perigoso. <br><br>Usos Comuns:<br><br>· Não é aconselhável fazer essa mistura devido ao risco associado.<br><br> Perigos: A reação entre esses produtos pode levar à liberação de vapores desconhecidos e potencialmente perigosos, o que pode resultar em irritação nas vias respiratórias, olhos e pele.<br><br>Recomendações:<br><br>· Evite combinar Limpa Forno com Multiuso.<br>· Mantenha os produtos em locais separados e use conforme as instruções no rótulo. "
 
 
                 }
@@ -228,8 +340,26 @@
                 if((selectedtext2 == "Água Sanitária" && selectedtext == "Lisoform") || (selectedtext2 == "Lisoform" && selectedtext == "Água Sanitária") ){  
                     document.getElementById("ResultTitle").innerHTML = "LISOFORM + ÁGUA SANITÁRIA:"
                     document.getElementById("Result").innerHTML = "Reação: A combinação de Lisoform e Água Sanitária pode resultar na formação de cloramina, um gás tóxico e irritante. <br><br>Usos Comuns:<br><br>· Não é recomendado combinar esses produtos devido aos riscos envolvidos.<br><br> Perigos: A mistura pode liberar vapores irritantes como a cloramina que causa irritação nas vias respiratórias, olhos e pele. A exposição prolongada ou em grandes quantidades pode levar a complicações respiratórias que vão desde irritações até queimaduras no seu sistema respiratório e intoxicações graves.<br><br>Recomendações:<br><br>· Evite a combinação de Lisoform com Água Sanitária<br>· Mantenha os dois produtos armazenados separadamente e em locais bem ventilados. "
-
-
+                }
+                if((selectedtext2 == "Amônia" && selectedtext == "Água Sanitária") || (selectedtext2 == "Água Sanitária" && selectedtext == "Amônia") ){  
+                    document.getElementById("ResultTitle").innerHTML = "ÁGUA SANITÁRIA + AMÔNIA:"
+                    document.getElementById("Result").innerHTML = "Reação:A combinação de água sanitária e amônia produz vapores tóxicos de cloramina. <br><br>Usos Comuns:<br><br>· Nenhum. Esta mistura não deve ser feita devido aos riscos associados.<br><br> Perigos:A mistura libera vapores tóxicos que podem causar irritação nas vias respiratórias, olhos e pele. Em casos graves, pode levar a complicações respiratórias.<br><br>Recomendações:<br><br>· Nunca misture água sanitária com amônia.<br>· Mantenha os dois produtos bem longe um do outro. "
+                }
+                if((selectedtext2 == "Ácido Muriático" && selectedtext == "Água Sanitária") || (selectedtext2 == "Água Sanitária" && selectedtext == "Ácido Muriático") ){  
+                    document.getElementById("ResultTitle").innerHTML = "ÁGUA SANITÁRIA + ÁCIDO MURIÁTICO:"
+                    document.getElementById("Result").innerHTML = "Reação:A combinação de água sanitária e ácido muriático pode produzir vapores corrosivos de gás cloro.<br><br>Usos Comuns:<br><br>· Não deve ser utilizada como mistura devido aos riscos envolvidos.<br><br> Perigos:A reação pode resultar em vapores corrosivos que causam irritação nas vias respiratórias, olhos e pele. Além disso, a exposição prolongada pode levar a danos pulmonares.<br><br>Recomendações:<br><br>· Evite combinar água sanitária com ácido muriático<br>· Mantenha os dois produtos em locais separados. "
+                }
+                if((selectedtext2 == "Alvejante (Cloro)" && selectedtext == "Amônia") || (selectedtext2 == "Amônia" && selectedtext == "Alvejante (Cloro)") ){  
+                    document.getElementById("ResultTitle").innerHTML = "ALVEJANTE (CLORO) + AMÔNIA:"
+                    document.getElementById("Result").innerHTML = "Reação:A combinação de alvejante à base de cloro e amônia pode produzir vapores tóxicos de cloramina.<br><br>Usos Comuns:<br><br>· Não deve ser utilizado como mistura devido aos riscos envolvidos.<br><br> Perigos:A reação pode resultar em vapores tóxicos que causam irritação nas vias respiratórias, olhos e pele. Em casos graves, pode levar a complicações respiratórias.<br><br>Recomendações:<br><br>· Nunca misture alvejante com amônia<br>· Mantenha os dois produtos em locais separados. "
+                }
+                if((selectedtext2 == "Alvejante (Cloro)" && selectedtext == "Desinfetante (Base de Amônia)") || (selectedtext2 == "Desinfetante (Base de Amônia)" && selectedtext == "Alvejante (Cloro)") ){  
+                    document.getElementById("ResultTitle").innerHTML = "DESINFETANTE (BASE DE AMÔNIA) + ALVEJANTE (CLORO):"
+                    document.getElementById("Result").innerHTML = "Reação:A combinação de desinfetante à base de amônia e alvejante à base de cloro pode produzir vapores de cloramina e ácido clorídrico.<br><br>Usos Comuns:<br><br>· Não deve ser utilizado como mistura devido aos riscos envolvidos.<br><br> Perigos:A reação pode resultar em vapores irritantes e corrosivos que causam irritação nas vias respiratórias, olhos e pele.<br><br>Recomendações:<br><br>· Evite combinar desinfetante à base de amônia com alvejante à base de cloro.<br>· Mantenha os dois produtos em locais separados. "
+                }
+                if((selectedtext2 == "Vinagre" && selectedtext == "Água Oxigenada") || (selectedtext2 == "Água Oxigenada" && selectedtext == "Vinagre") ){  
+                    document.getElementById("ResultTitle").innerHTML = "ÁGUA OXIGENADA + VINAGRE:"
+                    document.getElementById("Result").innerHTML = "Reação:A combinação de água oxigenada e vinagre pode produzir ácido peracético, que é corrosivo.<br><br>Usos Comuns:<br><br>· Não é recomendado misturar água oxigenada com vinagre devido aos riscos associados.<br><br> Perigos:A reação pode resultar em vapores corrosivos que causam irritação nas vias respiratórias, olhos e pele.<br><br>Recomendações:<br><br>· Evite combinar água oxigenada com vinagre.<br>· Mantenha os dois produtos em locais separados. "
                 }
         }
     </script>
