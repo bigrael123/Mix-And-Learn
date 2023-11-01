@@ -66,3 +66,89 @@ button:hover{
 
 
 
+@media only screen and (max-width: 300px){
+    button{
+        width: 10% !important;
+    }
+    #ingrediente2{
+        width: 50px;
+        }
+        #ingrediente1{
+            width: 50px;
+            }
+}
+@media only screen and (max-width: 1980px){
+    button{
+        width: 15% !important;
+        height: 5% !important;
+    }
+    #Messagebox{
+
+        width: 75% !important;
+    }
+
+}
+@media only screen and (max-width: 800px){
+    button{
+        width: 25% !important;
+        height: 5% !important;
+    }
+    *{
+        font-size: 24px !important;
+    }
+}
+@media only screen and (max-height: 1000px){
+    button{
+        width: 15% !important;
+        height: 7% !important;
+    }
+    *{
+        font-size: 24px !important;
+    }
+}
+@media only screen and (max-width: 773px){
+    button{
+        width: 15% !important;
+        height: 7% !important;
+    }
+    *{
+        font-size: 15px !important;
+    }
+    #ingrediente2{
+        width: 300px;
+        }
+        #ingrediente1{
+            width: 300px;
+            }
+}
+
+@media only screen and (max-width: 450px){
+    button{
+        width: 15% !important;
+        height: 7% !important;
+    }
+    #logo{
+        width: 50%;
+    }
+    *{
+        font-size: 10px !important;
+    }
+    #ingrediente2{
+        width: 200px;
+        }
+        #ingrediente1{
+            width: 200px;
+            }
+}
+
+@media only screen and (max-width: 273px){
+    *{
+        font-size: 5px !important;
+    }
+    #ingrediente2{
+        width: 100px;
+        }
+        #ingrediente1{
+            width: 100px;
+            }
+}
