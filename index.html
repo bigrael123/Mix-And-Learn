@@ -19,10 +19,10 @@
                 </div>
                 
                 <div id="form">
-                    <p>Selecione Os Ingredientes</p>
+                    <p>Selecione Os produtos</p>
                     
                 </div>
-                <label for="ingrediente1">Ingrediente 1:</label> 
+                <label for="ingrediente1">Produto 1:</label> 
                     <select name="ingredientes1" id="ingrediente1" onchange="Activateselect2();"> 
                     <option value="0"></option> 
                     <option value="1">Ácido Muriático</option> 
@@ -34,24 +34,25 @@
                     <option value="7">Amônia</option> 
                    <option value="8">Bicarbonato de Sódio</option> 
                     <option value="9">Cloro em GeL</option> 
-                    <option value="10">Desentupidores de Pia</option> 
-                    <option value="11">Desinfetante (Base de Amônia)</option> 
-                    <option value="12">Detergente</option> 
-                   <option value="13">Limão</option> 
-                    <option value="14">Limpa Alumínio</option> 
-                    <option value="15">Limpa Forno</option> 
-                    <option value="16">Limpa Vidros</option> 
-                    <option value="17">Lisoform</option> 
-                   <option value="18">Lustra Móveis</option> 
-                    <option value="19">Multiuso</option> 
-                    <option value="20">Pasta de Dente</option> 
-                    <option value="21">Querosene</option> 
-                    <option value="22">Sabão em Pó</option> 
-                   <option value="23">Vanish</option> 
-                    <option value="24">Vinagre</option> 
+                    <option value="10">Desengordurante</option> 
+                    <option value="11">Desentupidores de Pia</option> 
+                    <option value="12">Desinfetante (Base de Amônia)</option> 
+                    <option value="13">Detergente</option> 
+                   <option value="14">Limão</option> 
+                    <option value="15">Limpa Alumínio</option> 
+                    <option value="16">Limpa Forno</option> 
+                    <option value="17">Limpa Vidros</option> 
+                    <option value="18">Lisoform</option> 
+                   <option value="19">Lustra Móveis</option> 
+                    <option value="20">Multiuso</option> 
+                    <option value="21">Pasta de Dente</option> 
+                    <option value="22">Querosene</option> 
+                    <option value="23">Sabão em Pó</option> 
+                   <option value="24">Vanish</option> 
+                    <option value="25">Vinagre</option> 
                     </select>
                     <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</h1>
-                    <label  for="ingrediente2">Ingrediente 2:</label> 
+                    <label  for="ingrediente2">Produto 2:</label> 
                     <select name="ingredientes2" id="ingrediente2" disabled> 
                      <option value="vazio2">                </option> 
                     <option value="Alcool2">Álcool</option> 
@@ -69,7 +70,6 @@
         function Activateselect2(){
             elt = document.getElementById("ingrediente1")
             selectedtext = elt.options[elt.selectedIndex].text
-            console.log(selectedtext)
             removeOptions(document.getElementById("ingrediente2"));
             if(selectedtext == ""){
                 document.getElementById("ingrediente2").setAttribute("disabled","")
@@ -154,6 +154,9 @@
              option = document.createElement("option")
              option.text = "Vinagre"
              select.add(option)
+             option2 = document.createElement("option")
+             option2.text = "Álcool"
+             select.add(option2)
          }
              if(selectedtext == "Limpa Forno"){
                 
@@ -178,7 +181,10 @@
                  select.add(option0)
                  option = document.createElement("option")
                  option.text = "Limpa Forno"
-                 select.add(option)
+                 select.add(option)  
+                 option2 = document.createElement("option")
+                 option2.text = "Água Sanitária"
+                 select.add(option2)
              }
              if(selectedtext == "Multiuso"){
                 
@@ -203,7 +209,6 @@
                  select.add(option)
              }
              if(selectedtext == "Água Sanitária"){
-                
                 document.getElementById("ingrediente2").removeAttribute("disabled")
                 select =  document.getElementById("ingrediente2")
                 option0 = document.createElement("option")
@@ -221,9 +226,40 @@
                  option4 = document.createElement("option")
                  option4.text = "Ácido Muriático"
                  select.add(option4)
+                 option5 = document.createElement("option")
+                 option5.text = "Detergente"
+                 select.add(option5)
+                 option6 = document.createElement("option")
+                 option6.text = "Desengordurante"
+                 select.add(option6)  
              }
-             if(selectedtext == "Ácido Muriático"){
-                
+             if(selectedtext == "Desengordurante"){              
+                document.getElementById("ingrediente2").removeAttribute("disabled")
+                select =  document.getElementById("ingrediente2")
+                option0 = document.createElement("option")
+                 option0.text = " "
+                 select.add(option0)
+                 option = document.createElement("option")
+                 option.text = "Água Sanitária"
+                 select.add(option)
+                 option2 = document.createElement("option")
+                 option2.text = "Álcool"
+                 select.add(option2)
+             }
+             if(selectedtext == "Álcool"){              
+                document.getElementById("ingrediente2").removeAttribute("disabled")
+                select =  document.getElementById("ingrediente2")
+                option0 = document.createElement("option")
+                 option0.text = " "
+                 select.add(option0)
+                 option = document.createElement("option")
+                 option.text = "Desengordurante"
+                 select.add(option)
+                 option2 = document.createElement("option")
+                 option2.text = "Água Oxigenada"
+                 select.add(option2)
+             }
+             if(selectedtext == "Ácido Muriático"){              
                 document.getElementById("ingrediente2").removeAttribute("disabled")
                 select =  document.getElementById("ingrediente2")
                 option0 = document.createElement("option")
@@ -300,26 +336,18 @@
                 if((selectedtext2 == "Vinagre" && selectedtext == "Bicarbonato de Sódio" )|| (selectedtext2 == "Bicarbonato de Sódio" && selectedtext == "Vinagre" )){  
                     document.getElementById("ResultTitle").innerHTML = "BICARBONATO DE SÓDIO + VINAGRE:"
                     document.getElementById("Result").innerHTML = "Reação: A combinação de bicarbonato de sódio e vinagre resulta em uma efervescência devido à liberação de dióxido de carbono. <br><br>Usos Comuns:<br><br>· Desobstrução de canos.<br>· Limpeza de superfícies.<br><br> Perigos: Esta mistura não apresenta perigos significativos quando usada para fins de limpeza.<br><br>Recomendações:<br><br>· Use em áreas bem ventiladas.<br>· Evite aplicar em superfícies sensíveis, como mármore ou granito, pois o vinagre pode causar corrosão. "
-
-
                 }
                 if((selectedtext2 == "Limão" && selectedtext == "Bicarbonato de Sódio") || (selectedtext2 == "Bicarbonato de Sódio" && selectedtext == "Limão") ){  
                     document.getElementById("ResultTitle").innerHTML = "BICARBONATO DE SÓDIO + LIMÃO:"
                     document.getElementById("Result").innerHTML = "Reação: Quando o bicarbonato de sódio e o limão entram em contato, ocorre uma reação efervescente devido à liberação de dióxido de carbono. <br><br>Usos Comuns:<br><br>· Limpeza de superfícies de cozinha.<br>· Desodorização de ambientes.<br>· Remoção de manchas leves.<br><br> Perigos: Não há perigos significativos associados a esta mistura quando utilizada para fins de limpeza.<br><br>Recomendações:<br><br>· Use a mistura em áreas bem ventiladas.<br>· Evite aplicar em superfícies sensíveis, como mármore ou granito, pois o limão pode causar corrosão. "
-
-
                 }
                 if((selectedtext2 == "Pasta de Dente" && selectedtext == "Bicarbonato de Sódio") || (selectedtext2 == "Bicarbonato de Sódio" && selectedtext == "Pasta de Dente") ){  
                     document.getElementById("ResultTitle").innerHTML = "BICARBONATO DE SODIO + PASTA DE DENTE:"
                     document.getElementById("Result").innerHTML = "Reação: A mistura de bicarbonato de sódio e pasta de dente resulta em uma combinação abrasiva que pode ser eficaz na remoção de manchas e na limpeza de superfícies. <br><br>Usos Comuns:<br><br>· Remoção de manchas em superfícies não sensíveis.<br>· Limpeza de azulejos e rejunte.<br><br> Perigos: Não há perigos significativos associados a esta mistura quando utilizada para fins de limpeza.<br><br>Recomendações:<br><br>· Use a mistura com moderação.<br> · Não aplique em superfícies sensíveis, pois pode ser abrasiva. "
-
-
                 }
                 if((selectedtext2 == "Cloro em GeL" && selectedtext == "Bicarbonato de Sódio") || (selectedtext2 == "Bicarbonato de Sódio" && selectedtext == "Cloro em GeL") ){  
                     document.getElementById("ResultTitle").innerHTML = "CLORO EM GEL + BICARBONATO DE SODIO:"
                     document.getElementById("Result").innerHTML = "Reação:A combinação de cloro em gel e bicarbonato de sódio pode resultar em uma reação efervescente, liberando dióxido de carbono. <br><br>Usos Comuns:<br><br>· Não é recomendado misturar cloro em gel com bicarbonato de sódio devido aos riscos associados.<br><br> Perigos:A reação pode gerar vapores irritantes e, em casos mais extremos, pode causar irritação nas vias respiratórias, olhos e pele.<br><br>Recomendações:<br><br>· Evite combinar cloro em gel com bicarbonato de sódio.<br>· Mantenha os dois produtos em locais separados."
-
-
                 }
                 if((selectedtext2 == "Detergente" && selectedtext == "Limpa Forno") || (selectedtext2 == "Limpa Forno" && selectedtext == "Detergente") ){  
                     document.getElementById("ResultTitle").innerHTML = "LIMPA FORNO + DETERGENTE:"
@@ -328,14 +356,10 @@
                 if((selectedtext2 == "Multiuso" && selectedtext == "Limpa Forno") || (selectedtext2 == "Limpa Forno" && selectedtext == "Multiuso") ){  
                     document.getElementById("ResultTitle").innerHTML = "LIMPA FORNO + MULTIUSO:"
                     document.getElementById("Result").innerHTML = "Reação: A combinação de Limpa Forno e Multiuso não é recomendada, pois pode resultar em uma mistura de produtos químicos variados, o que pode ser perigoso. <br><br>Usos Comuns:<br><br>· Não é aconselhável fazer essa mistura devido ao risco associado.<br><br> Perigos: A reação entre esses produtos pode levar à liberação de vapores desconhecidos e potencialmente perigosos, o que pode resultar em irritação nas vias respiratórias, olhos e pele.<br><br>Recomendações:<br><br>· Evite combinar Limpa Forno com Multiuso.<br>· Mantenha os produtos em locais separados e use conforme as instruções no rótulo. "
-
-
                 }
                 if((selectedtext2 == "Água Sanitária" && selectedtext == "Lustra Móveis") || (selectedtext2 == "Lustra Móveis" && selectedtext == "Água Sanitária") ){  
                     document.getElementById("ResultTitle").innerHTML = "LUSTRA MÓVEIS + ÁGUA SANITÁRIA:"
                     document.getElementById("Result").innerHTML = "Reação: A combinação de lustra móveis e água sanitária pode resultar em uma mistura instável e potencialmente perigosa. <br><br>Usos Comuns:<br><br>· Não é recomendado combinar esses produtos devido aos riscos envolvidos.<br><br> Perigos: A reação entre lustra móveis e água sanitária pode produzir produtos químicos não identificados, os quais podem ser tóxicos ou corrosivos. Os vapores resultantes podem causar irritação nas vias respiratórias, olhos e pele.<br><br>Recomendações:<br><br>· Evite a combinação de lustra móveis com água sanitária.<br>· Mantenha os produtos em locais separados. "
-
-
                 }
                 if((selectedtext2 == "Água Sanitária" && selectedtext == "Lisoform") || (selectedtext2 == "Lisoform" && selectedtext == "Água Sanitária") ){  
                     document.getElementById("ResultTitle").innerHTML = "LISOFORM + ÁGUA SANITÁRIA:"
@@ -360,6 +384,19 @@
                 if((selectedtext2 == "Vinagre" && selectedtext == "Água Oxigenada") || (selectedtext2 == "Água Oxigenada" && selectedtext == "Vinagre") ){  
                     document.getElementById("ResultTitle").innerHTML = "ÁGUA OXIGENADA + VINAGRE:"
                     document.getElementById("Result").innerHTML = "Reação:A combinação de água oxigenada e vinagre pode produzir ácido peracético, que é corrosivo.<br><br>Usos Comuns:<br><br>· Não é recomendado misturar água oxigenada com vinagre devido aos riscos associados.<br><br> Perigos:A reação pode resultar em vapores corrosivos que causam irritação nas vias respiratórias, olhos e pele.<br><br>Recomendações:<br><br>· Evite combinar água oxigenada com vinagre.<br>· Mantenha os dois produtos em locais separados. "
+                }
+                
+                if((selectedtext2 == "Desengordurante" && selectedtext == "Água Sanitária") || (selectedtext2 == "Água Sanitária" && selectedtext == "Desengordurante") ){  
+                    document.getElementById("ResultTitle").innerHTML = "DESENGORDURANTE + ÁGUA SANITÁRIA:"
+                    document.getElementById("Result").innerHTML = "Reação:A combinação de desengordurante e água sanitária pode resultar na liberação de vapores tóxicos.<br><br>Usos Comuns:<br><br>· Não é recomendado misturar desengordurante com água sanitária devido aos riscos associados.<br><br> Perigos:A reação pode produzir vapores tóxicos que causam irritação nas vias respiratórias, olhos e pele.<br><br>Recomendações:<br><br>· Evite combinar desengordurante com água sanitária<br>· Mantenha os dois produtos em locais separados. "
+                }
+                if((selectedtext2 == "Água Sanitária" && selectedtext == "Detergente") || (selectedtext2 == "Detergente" && selectedtext == "Água Sanitária") ){  
+                    document.getElementById("ResultTitle").innerHTML = "DETERGENTE + ÁGUA SANITÁRIA:"
+                    document.getElementById("Result").innerHTML = "Reação:A combinação de detergente e água sanitária pode resultar em vapores de cloramina.<br><br>Usos Comuns:<br><br>·Não é recomendado misturar detergente com água sanitária devido aos riscos associados.<br><br> Perigos: A reação pode resultar em vapores tóxicos que causam irritação nas vias respiratórias, olhos e pele. A inalação pode causar irritação brônquica, dificuldade para respirar e edema pulmonar.<br><br>Recomendações:<br><br>· Evite combinar detergente com água sanitária.<br>· Mantenha os dois produtos em locais separados. "
+                }
+                if((selectedtext2 == "Álcool" && selectedtext == "Desengordurante") || (selectedtext2 == "Desengordurante" && selectedtext == "Álcool") ){  
+                    document.getElementById("ResultTitle").innerHTML = "DESENGORDURANTE + ÁLCOOL:"
+                    document.getElementById("Result").innerHTML = "Reação:A combinação de desengordurante e álcool pode resultar em vapores potencialmente inflamáveis<br><br>Usos Comuns:<br><br>· Não é recomendado misturar desengordurante com álcool devido aos riscos associados.<br><br> Perigos: : A reação pode produzir vapores inflamáveis e tóxicos que podem causar irritação nas vias respiratórias, olhos e pele.<br><br>Recomendações:<br><br>· Evite combinar desengordurante com álcool.<br>· Mantenha os dois produtos em locais separados. "
                 }
         }
     </script>
