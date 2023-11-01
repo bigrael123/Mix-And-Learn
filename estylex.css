@@ -99,7 +99,6 @@ button:hover{
 @media only screen and (max-height: 1000px){
     button{
         width: 15% !important;
-        height: 7% !important;
     }
     *{
         font-size: 24px !important;
@@ -108,7 +107,6 @@ button:hover{
 @media only screen and (max-width: 773px){
     button{
         width: 15% !important;
-        height: 7% !important;
     }
     *{
         font-size: 15px !important;
@@ -123,8 +121,7 @@ button:hover{
 
 @media only screen and (max-width: 450px){
     button{
-        width: 15% !important;
-        height: 7% !important;
+        width: 15% !important
     }
     #logo{
         width: 50%;
