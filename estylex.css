@@ -73,6 +73,36 @@ button{
 }
 
 
+@media only screen and (max-width: 717px){
+        #Titulo{
+            font-size: 45;
+        }
+    
+}
+@media only screen and (max-width: 461px){
+    #Titulo{
+        font-size: 30;
+    }
 
+}
+@media only screen and (max-width: 700px){
+    #Result{
+        font-size: 20;
+    }
 
+}
 
+@media only screen and (max-width: 397px){
+    #ingrediente2{
+        width: 300px;
+        }
+        #ingrediente1{
+            width: 300px;
+            }
+        #logo{
+            width: 75%;
+        }
+        #Titulo{
+            font-size: 15;
+        }
+}
