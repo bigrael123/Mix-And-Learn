@@ -1,7 +1,16 @@
+@font-face {
+    font-family: Shrimp ;
+    src: url(SHRIMP.ttf);
+}
+@font-face {
+    font-family: QuickSand ;
+    src: url(Quicksand-VariableFont_wght.ttf);
+}
 *{
+    font-family:QuickSand;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing:content-box;
     color: rgba(0, 0, 0, 0.932);
     font-size: 30px;
     text-align: center;
@@ -15,7 +24,7 @@ width: 400px;
     }
 
 body{
-    background-color: #199fb1;
+    background-color: #dadada;
     background-repeat: no-repeat;
     background-position: center center fixed;
     padding: 0;
@@ -26,21 +35,25 @@ body{
 }
 
 #Result{
-        margin-bottom: 20px;
+        margin-bottom: 40px;
+        margin-left: 25%;
+        margin-right: 25%;
+        word-spacing: -2xp;
+        text-align: justify;
        /* text-align: left;*/
 }
 
 #plus{
-    padding-left: 50%;
-text-align: start;
+
 }
 
 
 
 button{
     /* background-color: black; */
-    background: linear-gradient(to right, blue 50%, rgb(3, 63, 112) 50%);
+    background: white;
     background-size: 200% 100%;
+    color:blue;
     height:50px;
     width:200px;
     background-position: right bottom;
@@ -58,23 +71,13 @@ button{
 #ingrediente2{
     border-radius: 20px 20px 20px 20px; 
 }
-button:hover{
-    background-position: left bottom;
-    color: orangered;
+#Titulo{
+    font-family: Shrimp;
+}
+#logo{
+
 }
 
-@media only screen and (max-width: 397px){
-    #ingrediente2{
-        width: 300px;
-        }
-        #ingrediente1{
-            width: 300px;
-            }
-        #logo{
-            width: 75%;
-        }
-    
-}
 
 
 
