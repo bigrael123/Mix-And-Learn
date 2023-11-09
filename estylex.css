@@ -38,14 +38,11 @@ body{
         margin-bottom: 40px;
         margin-left: 25%;
         margin-right: 25%;
-        word-spacing: -2xp;
-        text-align: justify;
+        text-align: start;
        /* text-align: left;*/
 }
 
-#plus{
 
-}
 
 
 
@@ -74,9 +71,7 @@ button{
 #Titulo{
     font-family: Shrimp;
 }
-#logo{
 
-}
 
 
 
