@@ -92,7 +92,7 @@ button:hover{
 }
 @media only screen and (max-width: 837px){
     #Titulo{
-        font-size: 30;
+        font-size: 60;
     }
     #ResultHolder{
         border: 1px grey solid;
@@ -101,16 +101,24 @@ button:hover{
     }
 }
 @media only screen and (max-width: 461px){
+    #ResultTitle{
+        font-size: 30;
+    }
     #Titulo{
-        font-size: 15;
+        font-size: 45;
     }
 
 }
 @media only screen and (max-width: 700px){
     #Result{
-        font-size: 20;
+        font-size: 15;
     }
-
+    #ResultTitle{
+        font-size: 25;
+    }
+    #Titulo{
+        font-size: 40;
+    }
 }
 
 @media only screen and (max-width: 397px){
@@ -124,6 +132,9 @@ button:hover{
             width: 75%;
         }
         #Titulo{
+            font-size: 25;
+        }
+        #ResultTitle{
             font-size: 15;
         }
         #Result{
@@ -137,11 +148,14 @@ button:hover{
 }
 @media only screen and (max-width: 255px){
 
-        #Titulo{
+        #ResultTitle{
             font-size: 7;
         }
         #Result{
             font-size: 5;
+        }
+        #Titulo{
+            font-size: 10;
         }
 
 }
