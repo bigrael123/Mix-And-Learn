@@ -453,7 +453,9 @@ function Misturar(){
         ig2 =document.getElementById("ingrediente2")
         selectedtext2 = ig2.options[ig2.selectedIndex].text
         Result = document.getElementById("ResultHolder")
-        Result.style.display = "block"
+        if(!elt.options[elt.selectedIndex].text == ""){
+            Result.style.display = "block"
+        }
         if((selectedtext2 == "Vinagre" && selectedtext == "Bicarbonato de Sódio" )|| (selectedtext2 == "Bicarbonato de Sódio" && selectedtext == "Vinagre" )){  
             document.getElementById("ResultTitle").innerHTML = "BICARBONATO DE SÓDIO + VINAGRE:"
             document.getElementById("Result").innerHTML = "Reação: A combinação de bicarbonato de sódio e vinagre resulta em uma efervescência devido à liberação de dióxido de carbono. <br><br>Usos Comuns:<br><br>· Desobstrução de canos.<br>· Limpeza de superfícies.<br><br> Perigos: Esta mistura não apresenta perigos significativos quando usada para fins de limpeza.<br><br>Recomendações:<br><br>· Use em áreas bem ventiladas.<br>· Evite aplicar em superfícies sensíveis, como mármore ou granito, pois o vinagre pode causar corrosão. "

@@ -49,13 +49,18 @@ body{
     display: none;
 }
 
-
+#header{
+    background: #5483b3;
+    margin-bottom: 35px;
+    width: 100%;
+    height: 25%;
+}
 
 button{
     /* background-color: black; */
-    background: linear-gradient(to right, white 50%, black 50%);
+    background: linear-gradient(to right, #5483b3 50%, #ccd0cf 50%);
     background-size: 200% 100%;
-    color: orangered;
+    color: blue;
     background-position: right bottom;
     height:50px;
     width:200px;
