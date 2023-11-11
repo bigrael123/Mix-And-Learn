@@ -44,6 +44,7 @@ body{
     border: 1px grey solid;
     margin-left: 25%;
     margin-right: 25%;
+    margin-bottom: 20;
     border-radius: 10px 10px 10px 10px;
     display: none;
 }
@@ -84,7 +85,17 @@ button:hover{
         #Titulo{
             font-size: 45;
         }
-    
+        #ResultHolder{
+            margin-left: 12%;
+            margin-right: 12%;
+        }
+}
+@media only screen and (max-width: 837px){
+    #ResultHolder{
+        border: 1px grey solid;
+        margin-left: 12%;
+        margin-right: 12%;
+    }
 }
 @media only screen and (max-width: 461px){
     #Titulo{
@@ -111,5 +122,8 @@ button:hover{
         }
         #Titulo{
             font-size: 15;
+        }
+        #Result{
+            font-size: 10;
         }
 }
