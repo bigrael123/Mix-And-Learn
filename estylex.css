@@ -91,6 +91,9 @@ button:hover{
         }
 }
 @media only screen and (max-width: 837px){
+    #Titulo{
+        font-size: 30;
+    }
     #ResultHolder{
         border: 1px grey solid;
         margin-left: 12%;
@@ -99,7 +102,7 @@ button:hover{
 }
 @media only screen and (max-width: 461px){
     #Titulo{
-        font-size: 30;
+        font-size: 15;
     }
 
 }
@@ -126,4 +129,19 @@ button:hover{
         #Result{
             font-size: 10;
         }
+        #ResultHolder{
+            border: 1px grey solid;
+            margin-left: 12%;
+            margin-right: 12%;
+        }
+}
+@media only screen and (max-width: 255px){
+
+        #Titulo{
+            font-size: 7;
+        }
+        #Result{
+            font-size: 5;
+        }
+
 }
