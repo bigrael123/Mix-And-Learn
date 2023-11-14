@@ -66,7 +66,6 @@ button{
     background: linear-gradient(to right, #5483b3 50%, white 50%);
     background-size: 200% 100%;
     background-position: right bottom;
-    color: blue;
     height:50px;
     width:200px;
     border-radius: 5px 5px 5px 5px;
